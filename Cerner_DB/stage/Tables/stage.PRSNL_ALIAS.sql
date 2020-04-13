@@ -1,0 +1,28 @@
+﻿CREATE TABLE [stage].[PRSNL_ALIAS] (
+    [PRSNL_ALIAS_ID]          FLOAT (53)    NULL,
+    [PERSON_ID]               FLOAT (53)    NULL,
+    [UPDT_CNT]                FLOAT (53)    NULL,
+    [UPDT_DT_TM]              DATETIME      NULL,
+    [UPDT_ID]                 FLOAT (53)    NULL,
+    [UPDT_TASK]               FLOAT (53)    NULL,
+    [UPDT_APPLCTX]            FLOAT (53)    NULL,
+    [ACTIVE_IND]              FLOAT (53)    NULL,
+    [ACTIVE_STATUS_CD]        FLOAT (53)    NULL,
+    [ACTIVE_STATUS_DT_TM]     DATETIME      NULL,
+    [ACTIVE_STATUS_PRSNL_ID]  FLOAT (53)    NULL,
+    [ALIAS_POOL_CD]           FLOAT (53)    NULL,
+    [PRSNL_ALIAS_TYPE_CD]     FLOAT (53)    NULL,
+    [ALIAS]                   VARCHAR (200) NULL,
+    [PRSNL_ALIAS_SUB_TYPE_CD] FLOAT (53)    NULL,
+    [CHECK_DIGIT]             FLOAT (53)    NULL,
+    [CHECK_DIGIT_METHOD_CD]   FLOAT (53)    NULL,
+    [BEG_EFFECTIVE_DT_TM]     DATETIME      NULL,
+    [END_EFFECTIVE_DT_TM]     DATETIME      NULL,
+    [DATA_STATUS_CD]          FLOAT (53)    NULL,
+    [DATA_STATUS_DT_TM]       DATETIME      NULL,
+    [DATA_STATUS_PRSNL_ID]    FLOAT (53)    NULL,
+    [CONTRIBUTOR_SYSTEM_CD]   FLOAT (53)    NULL,
+    [LAST_UTC_TS]             VARCHAR (75)  NULL,
+    [INST_ID]                 FLOAT (53)    NULL
+);
+

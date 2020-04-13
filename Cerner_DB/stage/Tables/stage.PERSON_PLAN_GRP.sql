@@ -1,0 +1,19 @@
+﻿CREATE TABLE [stage].[PERSON_PLAN_GRP] (
+    [PERSON_PLAN_GRP_ID]     FLOAT (53) NULL,
+    [PARENT_ID]              FLOAT (53) NULL,
+    [CHILD_ID]               FLOAT (53) NULL,
+    [PERSON_PLAN_GRP_CD]     FLOAT (53) NULL,
+    [UPDT_CNT]               FLOAT (53) NULL,
+    [UPDT_DT_TM]             DATETIME   NULL,
+    [UPDT_ID]                FLOAT (53) NULL,
+    [UPDT_TASK]              FLOAT (53) NULL,
+    [UPDT_APPLCTX]           FLOAT (53) NULL,
+    [ACTIVE_IND]             FLOAT (53) NULL,
+    [ACTIVE_STATUS_CD]       FLOAT (53) NULL,
+    [ACTIVE_STATUS_DT_TM]    DATETIME   NULL,
+    [ACTIVE_STATUS_PRSNL_ID] FLOAT (53) NULL,
+    [BEG_EFFECTIVE_DT_TM]    DATETIME   NULL,
+    [END_EFFECTIVE_DT_TM]    DATETIME   NULL,
+    [CONTRIBUTOR_SYSTEM_CD]  FLOAT (53) NULL
+);
+

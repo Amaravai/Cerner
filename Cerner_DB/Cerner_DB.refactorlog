@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="aec127f2-6816-4e21-8f99-fedb8ce66827" ChangeDateTime="04/03/2020 16:11:27">
+    <Property Name="ElementName" Value="[cerner].[HEALTH PLAN]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[cerner]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[HEALTH_PLAN]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8e2b9736-9af5-41f8-879e-a2f259221536" ChangeDateTime="04/03/2020 16:11:48">
+    <Property Name="ElementName" Value="[stage].[HEALTH PLAN]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[HEALTH_PLAN]" />
+  </Operation>
+</Operations>

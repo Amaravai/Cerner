@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Cerner_DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b9e53bb9-6911-4bc9-a5d7-cf5af213b42e}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Cerner_DB</RootNamespace>
+    <AssemblyName>Cerner_DB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
+    <DefaultSchema>cerner</DefaultSchema>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="cerner\" />
+    <Folder Include="cerner\Tables\" />
+    <Folder Include="stage" />
+    <Folder Include="etl" />
+    <Folder Include="etl\Tables" />
+    <Folder Include="stage\Tables" />
+    <Folder Include="etl\Programmability" />
+    <Folder Include="etl\Programmability\Functions" />
+    <Folder Include="etl\Programmability\StoredProcedures" />
+    <Folder Include="etl\Scripts" />
+    <Folder Include="etl\Security" />
+    <Folder Include="etl\Security\Schemas" />
+    <Folder Include="cerner\Programmability" />
+    <Folder Include="cerner\Programmability\Functions" />
+    <Folder Include="cerner\Programmability\StoredProcedures" />
+    <Folder Include="cerner\Security" />
+    <Folder Include="cerner\Security\Schemas" />
+    <Folder Include="cerner\Scripts" />
+    <Folder Include="stage\Programmability" />
+    <Folder Include="stage\Programmability\Functions" />
+    <Folder Include="stage\Programmability\StoredProcedures" />
+    <Folder Include="stage\Scripts" />
+    <Folder Include="stage\Security" />
+    <Folder Include="stage\Security\Schemas" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="cerner\Programmability\Stored Procedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="cerner\Tables\cerner.PRSNL.sql" />
+    <Build Include="cerner\Tables\cerner.PERSON_PRSNL_RELTN.sql" />
+    <Build Include="cerner\Tables\cerner.PERSON_PLAN_RELTN.sql" />
+    <Build Include="cerner\Tables\cerner.PERSON_PLAN_GRP.sql" />
+    <Build Include="cerner\Tables\cerner.PERSON_PERSON_RELTN.sql" />
+    <Build Include="cerner\Tables\cerner.PERSON_PATIENT.sql" />
+    <Build Include="cerner\Tables\cerner.PERSON_ORG_RELTN.sql" />
+    <Build Include="cerner\Tables\cerner.PERSON_NAME_HIST.sql" />
+    <Build Include="cerner\Tables\cerner.PERSON_CODE_VALUE_R.sql" />
+    <Build Include="cerner\Tables\cerner.PERSON_ALIAS.sql" />
+    <Build Include="cerner\Tables\cerner.PERSON.sql" />
+    <Build Include="cerner\Tables\cerner.ORGANIZATION.sql" />
+    <Build Include="cerner\Tables\cerner.HEALTH_PLAN.sql" />
+    <Build Include="cerner\Tables\cerner.ENCOUNTER.sql" />
+    <Build Include="cerner\Tables\cerner.ENCNTR_PRSNL_RELTN.sql" />
+    <Build Include="cerner\Tables\cerner.ENCNTR_PROCEDURE.sql" />
+    <Build Include="cerner\Tables\cerner.ENCNTR_PLAN_RELTN.sql" />
+    <Build Include="cerner\Tables\cerner.ENCNTR_ALIAS.sql" />
+    <Build Include="cerner\Tables\cerner.CODE_VALUE.sql" />
+    <Build Include="cerner\Tables\cerner.ADDRESS.sql" />
+    <Build Include="cerner\Tables\cerner.ENCNTR_ENCNTR_RELTN.sql" />
+    <Build Include="cerner\Tables\cerner.PHONE.sql" />
+    <Build Include="cerner\Tables\cerner.PRSNL_ALIAS.sql" />
+    <Build Include="etl\Tables\etl.Manifest.sql" />
+    <Build Include="etl\Tables\etl.WaterMark.sql" />
+    <Build Include="stage\Tables\stage.ADDRESS.sql" />
+    <Build Include="stage\Tables\stage.CODE_VALUE.sql" />
+    <Build Include="stage\Tables\stage.ENCNTR_ALIAS.sql" />
+    <Build Include="stage\Tables\stage.ENCNTR_ENCNTR_RELTN.sql" />
+    <Build Include="stage\Tables\stage.ENCNTR_PLAN_RELTN.sql" />
+    <Build Include="stage\Tables\stage.ENCNTR_PROCEDURE.sql" />
+    <Build Include="stage\Tables\stage.ENCNTR_PRSNL_RELTN.sql" />
+    <Build Include="stage\Tables\stage.ENCOUNTER.sql" />
+    <Build Include="stage\Tables\stage.HEALTH_PLAN.sql" />
+    <Build Include="stage\Tables\stage.ORGANIZATION.sql" />
+    <Build Include="stage\Tables\stage.PERSON.sql" />
+    <Build Include="stage\Tables\stage.PERSON_ALIAS.sql" />
+    <Build Include="stage\Tables\stage.PERSON_CODE_VALUE_R.sql" />
+    <Build Include="stage\Tables\stage.PERSON_NAME_HIST.sql" />
+    <Build Include="stage\Tables\stage.PERSON_ORG_RELTN.sql" />
+    <Build Include="stage\Tables\stage.PERSON_PATIENT.sql" />
+    <Build Include="stage\Tables\stage.PERSON_PERSON_RELTN.sql" />
+    <Build Include="stage\Tables\stage.PERSON_PLAN_GRP.sql" />
+    <Build Include="stage\Tables\stage.PERSON_PLAN_RELTN.sql" />
+    <Build Include="stage\Tables\stage.PERSON_PRSNL_RELTN.sql" />
+    <Build Include="stage\Tables\stage.PHONE.sql" />
+    <Build Include="stage\Tables\stage.PRSNL.sql" />
+    <Build Include="stage\Tables\stage.PRSNL_ALIAS.sql" />
+    <None Include="etl\Scripts\Insert_WaterMark.sql" />
+    <Build Include="etl\Security\Schemas\etl.sql" />
+    <Build Include="cerner\Security\Schemas\cerner.sql" />
+    <Build Include="stage\Security\Schemas\stage.sql" />
+    <Build Include="dbo\Stored Procedures\dbo.sp_ssis_addlogentry.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessAddress.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessCodeValue.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessEncntrAlias.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessEncntrPlanReltn.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessEncntrProcedure.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessEncntrPrsnlReltn.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessEncounter.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessHealthPlan.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessOrganization.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPerson.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPersonAlias.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPersonCodeValueR.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPersonNameHist.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPersonOrgReltn.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPersonPatient.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPersonPersonReltn.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPersonPlanGrp.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPersonPlanReltn.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPersonPrsnlReltn.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPhone.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPrsnl.sql" />
+    <Build Include="cerner\Programmability\Stored Procedures\cerner.usp_ProcessPrsnlAlias.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cerner_DB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Cerner_DB.refactorlog" />
+  </ItemGroup>
+</Project>
