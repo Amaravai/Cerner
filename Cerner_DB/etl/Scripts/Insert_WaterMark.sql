@@ -41,6 +41,10 @@ Values('v500','PERSON_ALIAS','I','UPDT_DT_TM','01/01/2017','UPDT_DT_TM',Null,'Y'
 Insert Into etl.WaterMark (SchemaName,TableName,LoadType,WaterMarkLowIdentifier,WaterMarkLowValue,WaterMarkHighIdentifier,WaterMarkHighValue,ActiveFlag,RowCreated,RowAltered)
 Values('v500','PERSON_NAME_HIST','I','UPDT_DT_TM','01/01/2017','UPDT_DT_TM',Null,'Y',GETDATE(),GETDATE());
 
+
+Insert Into etl.WaterMark (SchemaName,TableName,LoadType,WaterMarkLowIdentifier,WaterMarkLowValue,WaterMarkHighIdentifier,WaterMarkHighValue,ActiveFlag,RowCreated,RowAltered)
+Values('v500','PERSON_NAME','I','UPDT_DT_TM','01/01/2017','UPDT_DT_TM',Null,'Y',GETDATE(),GETDATE());
+
 Insert Into etl.WaterMark (SchemaName,TableName,LoadType,WaterMarkLowIdentifier,WaterMarkLowValue,WaterMarkHighIdentifier,WaterMarkHighValue,ActiveFlag,RowCreated,RowAltered)
 Values('v500','PERSON_ORG_RELTN','I','UPDT_DT_TM','01/01/2017','UPDT_DT_TM',Null,'Y',GETDATE(),GETDATE());
 

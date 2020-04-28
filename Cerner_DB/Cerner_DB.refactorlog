@@ -14,4 +14,17 @@
     <Property Name="ParentElementType" Value="SqlSchema" />
     <Property Name="NewName" Value="[HEALTH_PLAN]" />
   </Operation>
+  <Operation Name="Move Schema" Key="3df2028f-b638-44e4-87de-f8814d96bed5" ChangeDateTime="04/28/2020 18:07:02">
+    <Property Name="ElementName" Value="[cerner].[PERSON_NAME]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="stage" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="982ac390-93d8-4b25-af90-1ea9be5ed518" ChangeDateTime="04/28/2020 18:32:06">
+    <Property Name="ElementName" Value="[stage].[PERSON_MAME]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[PERSON_NAME]" />
+  </Operation>
 </Operations>
